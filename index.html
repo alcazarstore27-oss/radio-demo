@@ -2,10 +2,8 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Radio Demo</title>
-<button id="installBtn" style="display:none; padding:15px; font-size:18px;">
-📲 Instalar MP Radio
-</button>
+  <title>MP Radio</title>
+
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#0d47a1">
 
@@ -26,17 +24,52 @@
       margin-top: 30px;
       width: 90%;
     }
+    button {
+      margin-top: 20px;
+      padding: 15px;
+      font-size: 18px;
+      border: none;
+      border-radius: 8px;
+      background: #ffffff;
+      color: #0d47a1;
+      font-weight: bold;
+    }
   </style>
 </head>
+
 <body>
 
   <h1>🎧 MP Radio</h1>
-<p>Transmitiendo 24/7</p>
+  <p>Transmitiendo 24/7</p>
+
+  <!-- BOTÓN DE INSTALACIÓN -->
+  <button id="installBtn" style="display:none;">
+    📲 Instalar MP Radio
+  </button>
 
   <audio controls autoplay>
-  <source src="https://stream.zeno.fm/oxt0glnzeg0uv.mp3" type="audio/mpeg">
-  Tu navegador no soporta audio.
-</audio>
+    <source src="https://stream.zeno.fm/oxt0glnzeg0uv.mp3" type="audio/mpeg">
+    Tu navegador no soporta audio.
+  </audio>
+
+  <!-- SCRIPT PARA PWA -->
+  <script>
+    let deferredPrompt;
+    const installBtn = document.getElementById('installBtn');
+
+    window.addEventListener('beforeinstallprompt', (e) => {
+      e.preventDefault();
+      deferredPrompt = e;
+      installBtn.style.display = 'inline-block';
+    });
+
+    installBtn.addEventListener('click', async () => {
+      installBtn.style.display = 'none';
+      deferredPrompt.prompt();
+      await deferredPrompt.userChoice;
+      deferredPrompt = null;
+    });
+  </script>
 
 </body>
 </html>
