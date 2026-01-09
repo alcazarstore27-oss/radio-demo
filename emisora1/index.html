@@ -2,13 +2,13 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Nombre de la Radio</title>
+  <title>MP Radio</title>
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#0d47a1">
 
-  <!-- Icono de la app en pantalla principal -->
-  <link rel="icon" href="img/logo.png" type="image/png">
+  <!-- Icono de la app (usa una imagen que SÍ existe) -->
+  <link rel="icon" href="img/radio.jpg" type="image/png">
 
   <!-- Manifest PWA -->
   <link rel="manifest" href="manifest.json">
@@ -28,10 +28,18 @@
       margin-top: 20px;
       width: 90%;
     }
+    .locutores {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
     .locutores img {
-      width: 150px;
+      width: 140px;
+      height: 140px;
+      object-fit: cover;
       border-radius: 50%;
       margin: 10px;
+      border: 3px solid #fff;
     }
     .socials a {
       margin: 0 10px;
@@ -48,6 +56,7 @@
       background: #ffffff;
       color: #0d47a1;
       font-weight: bold;
+      cursor: pointer;
     }
     .programas {
       text-align: left;
@@ -63,7 +72,7 @@
 <body>
 
   <!-- Título principal -->
-  <h1>🎧 Nombre de la Radio</h1>
+  <h1>🎧 MP Radio</h1>
   <p>Transmitiendo 24/7</p>
 
   <!-- Reproductor de radio -->
@@ -78,36 +87,39 @@
   <!-- Sección de locutores -->
   <h2>Locutores</h2>
   <div class="locutores">
-    <img src="img/locutor1.jpg" alt="Locutor 1">
-    <img src="img/locutor2.jpg" alt="Locutor 2">
-    <!-- Agregar más locutores según la emisora -->
+    <img src="img/Guiselle.jpg" alt="Guiselle">
+    <img src="img/nuevo juan.jpg" alt="Juan">
+    <img src="img/nuevo rocio.jpg" alt="Rocío">
+    <img src="img/rocio.jpg" alt="Rocío">
+    <img src="img/pastores.jpg" alt="Pastores">
+    <img src="img/peña.jpg" alt="Peña">
   </div>
 
   <!-- Sección Misión y Visión -->
   <h2>Misión y Visión</h2>
-  <p><strong>Misión:</strong> Escribir aquí la misión de la radio.</p>
-  <p><strong>Visión:</strong> Escribir aquí la visión de la radio.</p>
+  <p><strong>Misión:</strong> Llevar contenido radial de calidad, música y mensajes que edifiquen y acompañen a nuestra audiencia todos los días.</p>
+  <p><strong>Visión:</strong> Ser una radio de referencia, cercana a la gente, usando la tecnología para llegar a más corazones.</p>
 
   <!-- Sección Programación -->
   <h2>Programación</h2>
   <div class="programas">
     <div class="programa"><strong>06:00 - 09:00:</strong> Programa Mañanero</div>
-    <div class="programa"><strong>12:00 - 14:00:</strong> Música en Vivo</div>
-    <div class="programa"><strong>18:00 - 20:00:</strong> Show Nocturno</div>
-    <!-- Cambiar según programación real de la emisora -->
+    <div class="programa"><strong>12:00 - 14:00:</strong> Música Variada</div>
+    <div class="programa"><strong>18:00 - 20:00:</strong> Programa Especial</div>
   </div>
 
-  <!-- Sección Redes Sociales / Contacto -->
+  <!-- Sección Redes Sociales -->
   <h2>Redes Sociales</h2>
   <div class="socials">
-    <a href="https://facebook.com/EMISORA">Facebook</a>
-    <a href="https://instagram.com/EMISORA">Instagram</a>
-    <a href="https://twitter.com/EMISORA">Twitter</a>
+    <a href="https://facebook.com/EMISORA" target="_blank">Facebook</a>
+    <a href="https://instagram.com/EMISORA" target="_blank">Instagram</a>
+    <a href="https://twitter.com/EMISORA" target="_blank">Twitter</a>
   </div>
 
+  <!-- Contacto -->
   <h2>Contacto</h2>
   <p>Correo: contacto@emisora.com</p>
-  <p>Teléfono: +506 0000-0000</p>
+  <p>Teléfono / WhatsApp: +506 0000-0000</p>
 
   <!-- Script para PWA -->
   <script>
