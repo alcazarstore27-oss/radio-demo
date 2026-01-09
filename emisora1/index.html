@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Nombre de la Radio</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0d47a1">
+
+  <!-- Icono de la app en pantalla principal -->
+  <link rel="icon" href="img/logo.png" type="image/png">
+
+  <!-- Manifest PWA -->
+  <link rel="manifest" href="manifest.json">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #0d47a1;
+      color: white;
+      text-align: center;
+    }
+    h1, h2 {
+      margin-top: 20px;
+    }
+    audio {
+      margin-top: 20px;
+      width: 90%;
+    }
+    .locutores img {
+      width: 150px;
+      border-radius: 50%;
+      margin: 10px;
+    }
+    .socials a {
+      margin: 0 10px;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    button {
+      margin-top: 20px;
+      padding: 15px;
+      font-size: 18px;
+      border: none;
+      border-radius: 8px;
+      background: #ffffff;
+      color: #0d47a1;
+      font-weight: bold;
+    }
+    .programas {
+      text-align: left;
+      margin: 20px auto;
+      max-width: 600px;
+    }
+    .programa {
+      margin-bottom: 15px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Título principal -->
+  <h1>🎧 Nombre de la Radio</h1>
+  <p>Transmitiendo 24/7</p>
+
+  <!-- Reproductor de radio -->
+  <audio controls autoplay>
+    <source src="URL_DEL_STREAM.mp3" type="audio/mpeg">
+    Tu navegador no soporta audio.
+  </audio>
+
+  <!-- Botón para instalar PWA -->
+  <button id="installBtn" style="display:none;">📲 Instalar App</button>
+
+  <!-- Sección de locutores -->
+  <h2>Locutores</h2>
+  <div class="locutores">
+    <img src="img/locutor1.jpg" alt="Locutor 1">
+    <img src="img/locutor2.jpg" alt="Locutor 2">
+    <!-- Agregar más locutores según la emisora -->
+  </div>
+
+  <!-- Sección Misión y Visión -->
+  <h2>Misión y Visión</h2>
+  <p><strong>Misión:</strong> Escribir aquí la misión de la radio.</p>
+  <p><strong>Visión:</strong> Escribir aquí la visión de la radio.</p>
+
+  <!-- Sección Programación -->
+  <h2>Programación</h2>
+  <div class="programas">
+    <div class="programa"><strong>06:00 - 09:00:</strong> Programa Mañanero</div>
+    <div class="programa"><strong>12:00 - 14:00:</strong> Música en Vivo</div>
+    <div class="programa"><strong>18:00 - 20:00:</strong> Show Nocturno</div>
+    <!-- Cambiar según programación real de la emisora -->
+  </div>
+
+  <!-- Sección Redes Sociales / Contacto -->
+  <h2>Redes Sociales</h2>
+  <div class="socials">
+    <a href="https://facebook.com/EMISORA">Facebook</a>
+    <a href="https://instagram.com/EMISORA">Instagram</a>
+    <a href="https://twitter.com/EMISORA">Twitter</a>
+  </div>
+
+  <h2>Contacto</h2>
+  <p>Correo: contacto@emisora.com</p>
+  <p>Teléfono: +506 0000-0000</p>
+
+  <!-- Script para PWA -->
+  <script>
+    let deferredPrompt;
+    const installBtn = document.getElementById('installBtn');
+
+    window.addEventListener('beforeinstallprompt', (e) => {
+      e.preventDefault();
+      deferredPrompt = e;
+      installBtn.style.display = 'inline-block';
+    });
+
+    installBtn.addEventListener('click', async () => {
+      installBtn.style.display = 'none';
+      deferredPrompt.prompt();
+      await deferredPrompt.userChoice;
+      deferredPrompt = null;
+    });
+  </script>
+
+</body>
+</html>
