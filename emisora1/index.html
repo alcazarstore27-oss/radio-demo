@@ -5,55 +5,68 @@
   <title>MP RADIO</title>
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#0d47a1">
+  <meta name="theme-color" content="#000000">
 
-  <!-- Icono de la app -->
+  <!-- Icono -->
   <link rel="icon" href="img/logo.png" type="image/png">
 
-  <!-- Manifest PWA -->
+  <!-- Manifest -->
   <link rel="manifest" href="manifest.json">
 
   <style>
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background: #0d47a1;
-      color: white;
+      background: #000000;
+      color: #d3a007;
       text-align: center;
     }
+
     h1, h2 {
       margin-top: 20px;
+      color: #d3a007;
     }
+
+    p {
+      color: #d3a007;
+    }
+
     audio {
       margin-top: 20px;
       width: 90%;
     }
+
     .locutores img {
-      width: 150px;
+      width: 160px;
       border-radius: 50%;
-      margin: 10px;
+      margin: 15px;
+      border: 3px solid #d3a007;
     }
+
     .socials a {
-      margin: 0 10px;
-      color: white;
+      margin: 0 12px;
+      color: #d3a007;
       text-decoration: none;
       font-weight: bold;
     }
+
     button {
       margin-top: 20px;
       padding: 15px;
       font-size: 18px;
       border: none;
       border-radius: 8px;
-      background: #ffffff;
-      color: #0d47a1;
+      background: #d3a007;
+      color: #000000;
       font-weight: bold;
     }
+
     .programas {
       text-align: left;
       margin: 20px auto;
       max-width: 600px;
     }
+
     .programa {
       margin-bottom: 15px;
     }
@@ -62,7 +75,7 @@
 
 <body>
 
-  <!-- Título principal -->
+  <!-- Título -->
   <h1>🎧 MP RADIO</h1>
   <p>Ministros de la Palabra</p>
 
@@ -72,13 +85,13 @@
     Tu navegador no soporta audio.
   </audio>
 
-  <!-- Botón instalar PWA -->
+  <!-- Botón PWA -->
   <button id="installBtn" style="display:none;">📲 Instalar App</button>
 
-  <!-- Locutores -->
+  <!-- Locutor -->
   <h2>Locutor</h2>
   <div class="locutores">
-    <img src="img/locutor 1.jpg" alt="Locutor principal">
+    <img src="img/locutor1.jpg" alt="Locutor principal">
   </div>
 
   <!-- Misión y Visión -->
