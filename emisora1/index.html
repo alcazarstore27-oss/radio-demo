@@ -2,13 +2,13 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>MP Radio</title>
+  <title>MP RADIO</title>
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#0d47a1">
 
-  <!-- Icono de la app (usa una imagen que SÍ existe) -->
-  <link rel="icon" href="img/radio.jpg" type="image/png">
+  <!-- Icono de la app -->
+  <link rel="icon" href="img/logo.png" type="image/png">
 
   <!-- Manifest PWA -->
   <link rel="manifest" href="manifest.json">
@@ -28,18 +28,10 @@
       margin-top: 20px;
       width: 90%;
     }
-    .locutores {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
     .locutores img {
-      width: 140px;
-      height: 140px;
-      object-fit: cover;
+      width: 150px;
       border-radius: 50%;
       margin: 10px;
-      border: 3px solid #fff;
     }
     .socials a {
       margin: 0 10px;
@@ -56,7 +48,6 @@
       background: #ffffff;
       color: #0d47a1;
       font-weight: bold;
-      cursor: pointer;
     }
     .programas {
       text-align: left;
@@ -72,56 +63,53 @@
 <body>
 
   <!-- Título principal -->
-  <h1>🎧 MP Radio</h1>
-  <p>Transmitiendo 24/7</p>
+  <h1>🎧 MP RADIO</h1>
+  <p>Ministros de la Palabra</p>
 
-  <!-- Reproductor de radio -->
+  <!-- Reproductor -->
   <audio controls autoplay>
-    <source src="URL_DEL_STREAM.mp3" type="audio/mpeg">
+    <source src="https://stream.zeno.fm/oxt0glnzeg0uv.mp3" type="audio/mpeg">
     Tu navegador no soporta audio.
   </audio>
 
-  <!-- Botón para instalar PWA -->
+  <!-- Botón instalar PWA -->
   <button id="installBtn" style="display:none;">📲 Instalar App</button>
 
-  <!-- Sección de locutores -->
-  <h2>Locutores</h2>
+  <!-- Locutores -->
+  <h2>Locutor</h2>
   <div class="locutores">
-    <img src="img/Guiselle.jpg" alt="Guiselle">
-    <img src="img/nuevo juan.jpg" alt="Juan">
-    <img src="img/nuevo rocio.jpg" alt="Rocío">
-    <img src="img/rocio.jpg" alt="Rocío">
-    <img src="img/pastores.jpg" alt="Pastores">
-    <img src="img/peña.jpg" alt="Peña">
+    <img src="img/locutor 1.jpg" alt="Locutor principal">
   </div>
 
-  <!-- Sección Misión y Visión -->
+  <!-- Misión y Visión -->
   <h2>Misión y Visión</h2>
-  <p><strong>Misión:</strong> Llevar contenido radial de calidad, música y mensajes que edifiquen y acompañen a nuestra audiencia todos los días.</p>
-  <p><strong>Visión:</strong> Ser una radio de referencia, cercana a la gente, usando la tecnología para llegar a más corazones.</p>
+  <p><strong>Misión:</strong> Con el fin de aprovechar este recurso de comunicación masivo.</p>
+  <p><strong>Visión:</strong> Informar, motivar y atraer a nuestros oyentes.</p>
 
-  <!-- Sección Programación -->
+  <!-- Programación -->
   <h2>Programación</h2>
   <div class="programas">
-    <div class="programa"><strong>06:00 - 09:00:</strong> Programa Mañanero</div>
-    <div class="programa"><strong>12:00 - 14:00:</strong> Música Variada</div>
-    <div class="programa"><strong>18:00 - 20:00:</strong> Programa Especial</div>
+    <div class="programa">
+      <strong>Martes y Jueves 3:00 pm – 4:00 pm:</strong> En paz me acostaré
+    </div>
+    <div class="programa">
+      <strong>Domingo 5:00 pm:</strong> Psicología del Alma
+    </div>
   </div>
 
-  <!-- Sección Redes Sociales -->
+  <!-- Redes Sociales -->
   <h2>Redes Sociales</h2>
   <div class="socials">
-    <a href="https://facebook.com/EMISORA" target="_blank">Facebook</a>
-    <a href="https://instagram.com/EMISORA" target="_blank">Instagram</a>
-    <a href="https://twitter.com/EMISORA" target="_blank">Twitter</a>
+    <a href="https://www.facebook.com/marco.pena.1968" target="_blank">Facebook</a>
+    <a href="https://www.youtube.com/@ministrosdelapalabra9342" target="_blank">YouTube</a>
   </div>
 
   <!-- Contacto -->
   <h2>Contacto</h2>
-  <p>Correo: contacto@emisora.com</p>
-  <p>Teléfono / WhatsApp: +506 0000-0000</p>
+  <p>Correo: ministrosdelapalabra7@gmail.com</p>
+  <p>WhatsApp: +506 8528 6323</p>
 
-  <!-- Script para PWA -->
+  <!-- Script PWA -->
   <script>
     let deferredPrompt;
     const installBtn = document.getElementById('installBtn');
