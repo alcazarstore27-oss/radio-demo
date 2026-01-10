@@ -1,145 +1,144 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>MP RADIO</title>
+<meta charset="UTF-8">
+<title>MP RADIO</title>
 
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#000000">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#000000">
 
-  <!-- Icono de la app -->
-  <link rel="icon" href="img/logo.png" type="image/png">
+<link rel="icon" href="img/logo-radio.png">
+<link rel="manifest" href="manifest.json">
 
-  <!-- Manifest PWA -->
-  <link rel="manifest" href="manifest.json">
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #000;
+  color: #d3a007;
+}
 
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #000000;
-      color: #d3a007;
-      text-align: center;
-    }
+/* Header */
+header {
+  text-align: center;
+  padding: 30px 10px;
+}
+header h1 {
+  font-size: 48px;
+  margin: 0;
+}
+header p {
+  font-size: 22px;
+  margin-top: 8px;
+}
 
-    h1, h2 {
-      margin-top: 20px;
-      color: #d3a007;
-    }
+/* Player */
+audio {
+  width: 95%;
+  display: block;
+  margin: 20px auto;
+}
 
-    p {
-      color: #d3a007;
-    }
+/* Layout */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+}
 
-    audio {
-      margin-top: 20px;
-      width: 90%;
-    }
+.left, .right {
+  width: 50%;
+  padding: 20px;
+}
 
-    .locutores img {
-      width: 160px;
-      border-radius: 50%;
-      margin: 15px;
-      border: 3px solid #d3a007;
-    }
+h2 {
+  border-bottom: 2px solid #d3a007;
+  padding-bottom: 6px;
+}
 
-    .socials a {
-      margin: 0 12px;
-      color: #d3a007;
-      text-decoration: none;
-      font-weight: bold;
-    }
+/* Programadores */
+.programadores img {
+  width: 280px;
+  border-radius: 20px;
+  border: 3px solid #d3a007;
+  display: block;
+  margin: 20px auto;
+}
 
-    button {
-      margin-top: 20px;
-      padding: 15px;
-      font-size: 18px;
-      border: none;
-      border-radius: 8px;
-      background: #d3a007;
-      color: #000000;
-      font-weight: bold;
-    }
+/* Redes */
+.socials img {
+  width: 80px;
+  margin: 10px;
+}
 
-    .programas {
-      text-align: left;
-      margin: 20px auto;
-      max-width: 600px;
-    }
+/* Logo desarrollador */
+.dev-logo img {
+  width: 220px;
+  margin-top: 40px;
+}
 
-    .programa {
-      margin-bottom: 15px;
-    }
-  </style>
+/* Responsive */
+@media (max-width: 768px) {
+  .left, .right {
+    width: 100%;
+  }
+}
+</style>
 </head>
 
 <body>
 
-  <!-- Título -->
+<header>
   <h1>🎧 MP RADIO</h1>
   <p>Ministros de la Palabra</p>
+</header>
 
-  <!-- Reproductor -->
-  <audio controls autoplay>
-    <source src="https://stream.zeno.fm/oxt0glnzeg0uv.mp3" type="audio/mpeg">
-    Tu navegador no soporta audio.
-  </audio>
+<audio controls autoplay>
+  <source src="https://stream.zeno.fm/oxt0glnzeg0uv.mp3" type="audio/mpeg">
+</audio>
 
-  <!-- Botón PWA -->
-  <button id="installBtn" style="display:none;">📲 Instalar App</button>
+<div class="programadores">
+  <h2 style="text-align:center;">Programadores de la Radio</h2>
+  <img src="img/programadores.png" alt="Programadores">
+</div>
 
-  <!-- Locutor -->
-  <h2>Locutor</h2>
-  <div class="locutores">
-    <img src="img/locutor1.jpg" alt="Locutor principal">
-  </div>
+<div class="container">
 
-  <!-- Misión y Visión -->
-  <h2>Misión y Visión</h2>
-  <p><strong>Misión:</strong> Con el fin de aprovechar este recurso de comunicación masivo.</p>
-  <p><strong>Visión:</strong> Informar, motivar y atraer a nuestros oyentes.</p>
+  <!-- IZQUIERDA -->
+  <div class="left">
+    <h2>Misión y Visión</h2>
+    <p><strong>Misión:</strong> Con el fin de aprovechar este recurso de comunicación masivo.</p>
+    <p><strong>Visión:</strong> Informar, motivar y atraer a nuestros oyentes.</p>
 
-  <!-- Programación -->
-  <h2>Programación</h2>
-  <div class="programas">
-    <div class="programa">
-      <strong>Martes y Jueves 3:00 pm – 4:00 pm:</strong> En paz me acostaré
+    <h2>Redes Sociales</h2>
+    <div class="socials">
+      <a href="https://www.facebook.com/marco.pena.1968" target="_blank">
+        <img src="img/facebook.png">
+      </a>
+      <a href="https://www.youtube.com/@ministrosdelapalabra9342" target="_blank">
+        <img src="img/youtube.png">
+      </a>
     </div>
-    <div class="programa">
-      <strong>Domingo 5:00 pm:</strong> Psicología del Alma
+
+    <h2>Contacto</h2>
+    <p>Correo: ministrosdelapalabra7@gmail.com</p>
+    <p>WhatsApp: +506 8528 6323</p>
+  </div>
+
+  <!-- DERECHA -->
+  <div class="right">
+    <h2>Programación</h2>
+    <p><strong>Martes y Jueves 3:00 pm – 4:00 pm:</strong><br>En paz me acostaré</p>
+    <p><strong>Domingo 5:00 pm:</strong><br>Psicología del Alma</p>
+
+    <div class="dev-logo">
+      <img src="img/logo-desarrollador.png" alt="Desarrollador">
     </div>
   </div>
 
-  <!-- Redes Sociales -->
-  <h2>Redes Sociales</h2>
-  <div class="socials">
-    <a href="https://www.facebook.com/marco.pena.1968" target="_blank">Facebook</a>
-    <a href="https://www.youtube.com/@ministrosdelapalabra9342" target="_blank">YouTube</a>
-  </div>
-
-  <!-- Contacto -->
-  <h2>Contacto</h2>
-  <p>Correo: ministrosdelapalabra7@gmail.com</p>
-  <p>WhatsApp: +506 8528 6323</p>
-
-  <!-- Script PWA -->
-  <script>
-    let deferredPrompt;
-    const installBtn = document.getElementById('installBtn');
-
-    window.addEventListener('beforeinstallprompt', (e) => {
-      e.preventDefault();
-      deferredPrompt = e;
-      installBtn.style.display = 'inline-block';
-    });
-
-    installBtn.addEventListener('click', async () => {
-      installBtn.style.display = 'none';
-      deferredPrompt.prompt();
-      await deferredPrompt.userChoice;
-      deferredPrompt = null;
-    });
-  </script>
+</div>
 
 </body>
 </html>
