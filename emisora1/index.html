@@ -1,161 +1,148 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>MP RADIO</title>
+<meta charset="UTF-8">
+<title>MP RADIO</title>
 
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#000000">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#000000">
 
-  <link rel="icon" href="img/logo.png" type="image/png">
-  <link rel="manifest" href="manifest.json">
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="img/logo-radio.png">
 
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #000;
-      color: #d3a007;
-    }
+<style>
+body{
+  margin:0;
+  font-family:Arial, sans-serif;
+  background:#000;
+  color:#d3a007;
+}
 
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 15px 20px;
-    }
+header{
+  text-align:center;
+  padding:20px;
+}
 
-    header h1 {
-      margin: 0;
-      font-size: 32px;
-    }
+header h1{
+  font-size:40px;
+  margin:0;
+}
 
-    header p {
-      margin: 0;
-      font-size: 18px;
-    }
+header p{
+  font-size:20px;
+  margin-top:5px;
+}
 
-    #installBtn {
-      display: none;
-      padding: 10px 14px;
-      font-size: 14px;
-      border: none;
-      border-radius: 6px;
-      background: #d3a007;
-      color: #000;
-      font-weight: bold;
-      cursor: pointer;
-    }
+audio{
+  width:95%;
+  margin:20px auto;
+  display:block;
+}
 
-    .container {
-      padding: 20px;
-      max-width: 900px;
-      margin: auto;
-      text-align: left;
-    }
+.main-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:40px;
+  padding:40px;
+}
 
-    audio {
-      width: 100%;
-      margin: 20px 0;
-    }
+.section{
+  border-top:1px solid #d3a007;
+  padding-top:15px;
+}
 
-    h2 {
-      margin-top: 30px;
-      border-bottom: 1px solid #d3a007;
-      padding-bottom: 5px;
-    }
+.programadores img{
+  width:260px;
+  border-radius:16px;
+  border:3px solid #d3a007;
+}
 
-    .locutores img {
-      width: 160px;
-      border-radius: 12px;
-      border: 3px solid #d3a007;
-      margin-top: 10px;
-    }
+.social-icons img{
+  width:50px;
+  margin-right:15px;
+  cursor:pointer;
+}
 
-    .programa {
-      margin-bottom: 10px;
-    }
+.footer-logo img{
+  width:160px;
+}
 
-    .socials {
-      display: flex;
-      gap: 15px;
-      margin-top: 10px;
-    }
-
-    .socials img {
-      width: 48px;
-      cursor: pointer;
-    }
-  </style>
+.install-btn{
+  position:fixed;
+  right:20px;
+  bottom:20px;
+  background:#d3a007;
+  color:#000;
+  border:none;
+  padding:14px 18px;
+  border-radius:10px;
+  font-weight:bold;
+  font-size:16px;
+}
+</style>
 </head>
 
 <body>
 
 <header>
-  <div>
-    <h1>🎧 MP RADIO</h1>
-    <p>Ministros de la Palabra</p>
-  </div>
-  <button id="installBtn">📲 Instalar App</button>
+  <h1>🎧 MP RADIO</h1>
+  <p>Ministros de la Palabra</p>
 </header>
 
-<div class="container">
+<audio controls autoplay>
+  <source src="https://stream.zeno.fm/oxt0glnzeg0uv.mp3" type="audio/mpeg">
+</audio>
 
-  <audio controls autoplay>
-    <source src="https://stream.zeno.fm/oxt0glnzeg0uv.mp3" type="audio/mpeg">
-  </audio>
+<div class="main-grid">
 
-  <h2>Programadores de la Radio</h2>
-  <div class="locutores">
-    <img src="img/locutor1.jpg" alt="Programador">
+  <!-- IZQUIERDA -->
+  <div>
+    <div class="section">
+      <h2>Misión y Visión</h2>
+      <p><strong>Misión:</strong> Con el fin de aprovechar este recurso de comunicación masivo.</p>
+      <p><strong>Visión:</strong> Informar, motivar y atraer a nuestros oyentes.</p>
+    </div>
+
+    <div class="section">
+      <h2>Redes Sociales</h2>
+      <div class="social-icons">
+        <a href="https://facebook.com" target="_blank">
+          <img src="img/facebook.png">
+        </a>
+        <a href="https://youtube.com" target="_blank">
+          <img src="img/youtube.png">
+        </a>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Contacto</h2>
+      <p>Correo: ministrosdelapalabra7@gmail.com</p>
+      <p>WhatsApp: +506 8528 6323</p>
+    </div>
   </div>
 
-  <!-- ORDEN SOLICITADO -->
+  <!-- DERECHA -->
+  <div>
+    <div class="section programadores">
+      <h2>Programadores de la Radio</h2>
+      <img src="img/programadores.png">
+    </div>
 
-  <h2>Misión y Visión</h2>
-  <p><strong>Misión:</strong> Con el fin de aprovechar este recurso de comunicación masivo.</p>
-  <p><strong>Visión:</strong> Informar, motivar y atraer a nuestros oyentes.</p>
+    <div class="section">
+      <h2>Programación</h2>
+      <p>Martes y Jueves 3:00 – 4:00 pm<br>En paz me acostaré</p>
+      <p>Domingo 5:00 pm<br>Psicología del Alma</p>
+    </div>
 
-  <h2>Programación</h2>
-  <div class="programa">
-    <strong>Martes y Jueves 3:00 pm – 4:00 pm:</strong> En paz me acostaré
+    <div class="section footer-logo">
+      <img src="img/logo-empresa.png">
+    </div>
   </div>
-  <div class="programa">
-    <strong>Domingo 5:00 pm:</strong> Psicología del Alma
-  </div>
-
-  <h2>Redes Sociales</h2>
-  <div class="socials">
-    <a href="https://www.facebook.com/marco.pena.1968" target="_blank">
-      <img src="img/facebook.png" alt="Facebook">
-    </a>
-    <a href="https://www.youtube.com/@ministrosdelapalabra9342" target="_blank">
-      <img src="img/youtube.png" alt="YouTube">
-    </a>
-  </div>
-
-  <h2>Contacto</h2>
-  <p>Correo: ministrosdelapalabra7@gmail.com</p>
-  <p>WhatsApp: +506 8528 6323</p>
 
 </div>
 
-<script>
-  let deferredPrompt;
-  const installBtn = document.getElementById('installBtn');
-
-  window.addEventListener('beforeinstallprompt', (e) => {
-    e.preventDefault();
-    deferredPrompt = e;
-    installBtn.style.display = 'block';
-  });
-
-  installBtn.addEventListener('click', async () => {
-    deferredPrompt.prompt();
-    await deferredPrompt.userChoice;
-    deferredPrompt = null;
-  });
-</script>
+<button class="install-btn">📲 Instalar App</button>
 
 </body>
 </html>
