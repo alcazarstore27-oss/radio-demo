@@ -7,83 +7,77 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#000000">
 
-<link rel="icon" href="img/logo-radio.png">
 <link rel="manifest" href="manifest.json">
+<link rel="icon" href="img/logo-radio.png">
 
 <style>
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: #000;
-  color: #d3a007;
+body{
+  margin:0;
+  font-family:Arial, sans-serif;
+  background:#000;
+  color:#d3a007;
 }
 
-/* Header */
-header {
-  text-align: center;
-  padding: 30px 10px;
-}
-header h1 {
-  font-size: 48px;
-  margin: 0;
-}
-header p {
-  font-size: 22px;
-  margin-top: 8px;
+header{
+  text-align:center;
+  padding:20px;
 }
 
-/* Player */
-audio {
-  width: 95%;
-  display: block;
-  margin: 20px auto;
+header h1{
+  font-size:40px;
+  margin:0;
 }
 
-/* Layout */
-.container {
-  display: flex;
-  flex-wrap: wrap;
-  max-width: 1200px;
-  margin: auto;
-  padding: 20px;
+header p{
+  font-size:20px;
+  margin-top:5px;
 }
 
-.left, .right {
-  width: 50%;
-  padding: 20px;
+audio{
+  width:95%;
+  margin:20px auto;
+  display:block;
 }
 
-h2 {
-  border-bottom: 2px solid #d3a007;
-  padding-bottom: 6px;
+.main-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:40px;
+  padding:40px;
 }
 
-/* Programadores */
-.programadores img {
-  width: 280px;
-  border-radius: 20px;
-  border: 3px solid #d3a007;
-  display: block;
-  margin: 20px auto;
+.section{
+  border-top:1px solid #d3a007;
+  padding-top:15px;
 }
 
-/* Redes */
-.socials img {
-  width: 80px;
-  margin: 10px;
+.programadores img{
+  width:260px;
+  border-radius:16px;
+  border:3px solid #d3a007;
 }
 
-/* Logo desarrollador */
-.dev-logo img {
-  width: 220px;
-  margin-top: 40px;
+.social-icons img{
+  width:50px;
+  margin-right:15px;
+  cursor:pointer;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .left, .right {
-    width: 100%;
-  }
+.footer-logo img{
+  width:160px;
+}
+
+.install-btn{
+  position:fixed;
+  right:20px;
+  bottom:20px;
+  background:#d3a007;
+  color:#000;
+  border:none;
+  padding:14px 18px;
+  border-radius:10px;
+  font-weight:bold;
+  font-size:16px;
 }
 </style>
 </head>
@@ -99,46 +93,56 @@ h2 {
   <source src="https://stream.zeno.fm/oxt0glnzeg0uv.mp3" type="audio/mpeg">
 </audio>
 
-<div class="programadores">
-  <h2 style="text-align:center;">Programadores de la Radio</h2>
-  <img src="img/programadores.png" alt="Programadores">
-</div>
-
-<div class="container">
+<div class="main-grid">
 
   <!-- IZQUIERDA -->
-  <div class="left">
-    <h2>Misión y Visión</h2>
-    <p><strong>Misión:</strong> Con el fin de aprovechar este recurso de comunicación masivo.</p>
-    <p><strong>Visión:</strong> Informar, motivar y atraer a nuestros oyentes.</p>
-
-    <h2>Redes Sociales</h2>
-    <div class="socials">
-      <a href="https://www.facebook.com/marco.pena.1968" target="_blank">
-        <img src="img/facebook.png">
-      </a>
-      <a href="https://www.youtube.com/@ministrosdelapalabra9342" target="_blank">
-        <img src="img/youtube.png">
-      </a>
+  <div>
+    <div class="section">
+      <h2>Misión y Visión</h2>
+      <p><strong>Misión:</strong> Con el fin de aprovechar este recurso de comunicación masivo.</p>
+      <p><strong>Visión:</strong> Informar, motivar y atraer a nuestros oyentes.</p>
     </div>
 
-    <h2>Contacto</h2>
-    <p>Correo: ministrosdelapalabra7@gmail.com</p>
-    <p>WhatsApp: +506 8528 6323</p>
+    <div class="section">
+      <h2>Redes Sociales</h2>
+      <div class="social-icons">
+        <a href="https://facebook.com" target="_blank">
+          <img src="img/facebook.png">
+        </a>
+        <a href="https://youtube.com" target="_blank">
+          <img src="img/youtube.png">
+        </a>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Contacto</h2>
+      <p>Correo: ministrosdelapalabra7@gmail.com</p>
+      <p>WhatsApp: +506 8528 6323</p>
+    </div>
   </div>
 
   <!-- DERECHA -->
-  <div class="right">
-    <h2>Programación</h2>
-    <p><strong>Martes y Jueves 3:00 pm – 4:00 pm:</strong><br>En paz me acostaré</p>
-    <p><strong>Domingo 5:00 pm:</strong><br>Psicología del Alma</p>
+  <div>
+    <div class="section programadores">
+      <h2>Programadores de la Radio</h2>
+      <img src="img/programadores.png">
+    </div>
 
-    <div class="dev-logo">
-      <img src="img/logo-desarrollador.png" alt="Desarrollador">
+    <div class="section">
+      <h2>Programación</h2>
+      <p>Martes y Jueves 3:00 – 4:00 pm<br>En paz me acostaré</p>
+      <p>Domingo 5:00 pm<br>Psicología del Alma</p>
+    </div>
+
+    <div class="section footer-logo">
+      <img src="img/logo-empresa.png">
     </div>
   </div>
 
 </div>
+
+<button class="install-btn">📲 Instalar App</button>
 
 </body>
 </html>
