@@ -1,18 +1,21 @@
 {
-  "name": "MP Radio - Ministros de la Palabra",
-  "short_name": "MP Radio",
+  "name": "MP RADIO – Ministros de la Palabra",
+  "short_name": "MP RADIO",
+  "description": "Radio cristiana transmitiendo 24/7 – Ministros de la Palabra",
   "start_url": "./index.html",
+  "scope": "./",
   "display": "standalone",
+  "orientation": "portrait",
   "background_color": "#000000",
-  "theme_color": "#000000",
+  "theme_color": "#d3a007",
   "icons": [
     {
-      "src": "img/logo-radio.png",
+      "src": "img/logo-192.png",
       "sizes": "192x192",
       "type": "image/png"
     },
     {
-      "src": "img/logo-radio.png",
+      "src": "img/logo-512.png",
       "sizes": "512x512",
       "type": "image/png"
     }
