@@ -1,11 +1,13 @@
 {
-  "name": "Emisora 1",
-  "short_name": "Emisora 1",
-  "start_url": "/radio-demo/emisora1/index.html",
-  "scope": "/radio-demo/emisora1/",
+  "name": "MP RADIO - Ministros de la Palabra",
+  "short_name": "MP Radio",
+  "description": "Emisora cristiana MP Radio - Ministros de la Palabra",
+  "start_url": "./index.html",
+  "scope": "./",
   "display": "standalone",
-  "background_color": "#0d6efd",
-  "theme_color": "#0d6efd",
+  "background_color": "#000000",
+  "theme_color": "#000000",
+  "orientation": "portrait",
   "icons": [
     {
       "src": "img/logo-radio.png",
