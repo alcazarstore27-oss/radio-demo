@@ -84,6 +84,7 @@ audio{
   border-radius:10px;
   font-weight:bold;
   font-size:16px;
+  cursor:pointer;
 }
 </style>
 </head>
@@ -104,7 +105,6 @@ audio{
 
   <!-- IZQUIERDA -->
   <div>
-
     <div class="section">
       <h2>Misión y Visión</h2>
       <p><strong>Misión:</strong> Informar, estimular y atraer a nuestros oyentes, convencidos de que sabemos algo que es imprescindible que ellos conozcan a través de una comunicación clara y un conocimiento profundo de parte de nuestro equipo de trabajo.</p>
@@ -145,12 +145,10 @@ audio{
       <p>Correo: info@ministrosdelapalabra.org</p>
       <p>WhatsApp: +506 8528 6323</p>
     </div>
-
   </div>
 
   <!-- DERECHA -->
   <div>
-
     <div class="section programadores">
       <h2>Programadores de la Radio</h2>
       <img src="img/locutores1.png" alt="Locutores">
@@ -158,36 +156,40 @@ audio{
 
     <div class="section">
       <h2>Programación</h2>
-
-      <p><strong>Siervos del Nuevo Pacto</strong><br>
-      Martes y Jueves – 5:00 pm CRC<br>
-      Productor: Ministro Marco Peña</p>
-
-      <p><strong>En paz me acostaré</strong><br>
-      Lunes, Miércoles y Viernes – 8:00 pm CRC<br>
-      Productor: Ministro Marco Peña</p>
-
-      <p><strong>De Fe en Fe, de Gloria en Gloria</strong><br>
-      Martes – 7:00 pm CRC / 10:00 pm Argentina<br>
-      Productores: Pastores Juan y Alicia Enríquez</p>
-
-      <p><strong>Psicología del Alma</strong><br>
-      Jueves – 7:00 pm CRC<br>
-      Productora: Dra. Guiselle Araya</p>
+      <p><strong>Siervos del Nuevo Pacto</strong><br>Martes y Jueves – 5:00 pm CRC</p>
+      <p><strong>En paz me acostaré</strong><br>Lunes, Miércoles y Viernes – 8:00 pm CRC</p>
+      <p><strong>De Fe en Fe, de Gloria en Gloria</strong><br>Martes – 7:00 pm CRC / 10:00 pm Argentina</p>
+      <p><strong>Psicología del Alma</strong><br>Jueves – 7:00 pm CRC</p>
     </div>
 
     <div class="section footer-logo">
-      <img src="img/logo-empresa.png" alt="Empresa creadora">
+      <img src="img/logo-empresa.png">
     </div>
-
   </div>
 
 </div>
 
-<button class="install-btn">📲 Instalar App</button>
+<button class="install-btn" id="installBtn" style="display:none;">
+  📲 Instalar App
+</button>
 
-<!-- REGISTRO SERVICE WORKER -->
 <script>
+let deferredPrompt;
+const installBtn = document.getElementById('installBtn');
+
+window.addEventListener('beforeinstallprompt', (e) => {
+  e.preventDefault();
+  deferredPrompt = e;
+  installBtn.style.display = 'block';
+
+  installBtn.onclick = async () => {
+    installBtn.style.display = 'none';
+    deferredPrompt.prompt();
+    await deferredPrompt.userChoice;
+    deferredPrompt = null;
+  };
+});
+
 if ('serviceWorker' in navigator) {
   navigator.serviceWorker.register('service-worker.js');
 }
@@ -195,4 +197,3 @@ if ('serviceWorker' in navigator) {
 
 </body>
 </html>
-
